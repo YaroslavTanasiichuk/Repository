@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*************************************************
+	         AnyLogic Project File 
+*************************************************	         
+-->
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="6.4.1.200910151246" AlpVersion="6.2.3">
+<Model>
+	<Id>1480014711540</Id>
+	<Name><![CDATA[Network]]></Name>
+	<ExcludeFromBuild>false</ExcludeFromBuild>
+	<EngineVersion>6</EngineVersion>
+	<JavaPackageName><![CDATA[network]]></JavaPackageName>
+	<ActiveObjectClasses>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1480014711541</Id>
+			<Name><![CDATA[Main]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<Generic>false</Generic>
+			<GenericParameters><![CDATA[T]]></GenericParameters>
+			<GenericParametersLabel><![CDATA[Generic parameters:]]></GenericParametersLabel>
+			<SamplesToKeep>100</SamplesToKeep>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+
+
+			</AgentProperties>
+
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+				<RecurrenceCode><![CDATA[1]]></RecurrenceCode>
+			</DatasetsCreationProperties>
+
+			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1480076443941</Id>
+					<Name><![CDATA[connectionsPerAgent]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue><![CDATA[2]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480076449697</Id>
+					<Name><![CDATA[connectionRange]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue><![CDATA[50]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480076453410</Id>
+					<Name><![CDATA[neighborLinkProbability]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue><![CDATA[0.95]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480077229143</Id>
+					<Name><![CDATA[scaleFreeM]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>40</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[int]]></Type>        
+						<InitialValue><![CDATA[10]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480092390292</Id>
+					<Name><![CDATA[dijkstra]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Dijkstra]]></Type>        
+						<InitialValue><![CDATA[null]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480173776676</Id>
+					<Name><![CDATA[graph]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Graph]]></Type>        
+						<InitialValue><![CDATA[null]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480177947619</Id>
+					<Name><![CDATA[vertexes]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[List<Vertex>]]></Type>        
+						<InitialValue><![CDATA[new ArrayList<Vertex>();]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480177952360</Id>
+					<Name><![CDATA[edges]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[List<Edge>]]></Type>        
+						<InitialValue><![CDATA[new ArrayList<Edge>();]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480181580529</Id>
+					<Name><![CDATA[startVertex]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Vertex]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480181584936</Id>
+					<Name><![CDATA[destVertex]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[Vertex]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1480265756889</Id>
+					<Name><![CDATA[maxR]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-600</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue><![CDATA[100]]></InitialValue>                 	
+					</Properties>
+				</Variable>
+			</Variables>
+			<Environments>
+				<Environment>
+					<Id>1480014711587</Id>
+					<Name><![CDATA[environment]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-200</X><Y>60</Y>
+					<Label><X>20</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<EnableSteps>false</EnableSteps>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>ARRANGED</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>false</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+
+				</Environment>
+			</Environments>
+			<Functions>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480076785119</Id>
+					<Name><![CDATA[applyNetwork]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[switch( radioNetworkType.getValue() ) {
+case 0:
+	environment.setNetworkUserDefined();
+	break;
+case 1:
+	environment.setNetworkRandom( connectionsPerAgent );
+	break;
+case 2:
+	environment.setNetworkAllInRange( connectionRange );
+	break;
+case 3:
+	environment.setNetworkRingLattice( (int)connectionsPerAgent );
+	break;
+case 4:
+	environment.setNetworkSmallWorld( (int)connectionsPerAgent, neighborLinkProbability );
+	break;
+case 5:
+	environment.setNetworkScaleFree( scaleFreeM );
+	break;
+}
+environment.applyNetwork();]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480076854633</Id>
+					<Name><![CDATA[setNumberOfAgents]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[n]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[while( nodes.size() > n )
+	remove_nodes( nodes.get(0) );
+while( nodes.size() < n ) {
+	NodeAgent a = add_nodes();
+	a.setEnvironment( environment );
+}
+environment.applyNetwork();
+environment.applyLayout();]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480149198444</Id>
+					<Name><![CDATA[disconnectAllFromAll]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>40</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(NodeAgent nAgent : nodes)
+	nAgent.disconnectFromAll();]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480173611671</Id>
+					<Name><![CDATA[showShotestPath]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[try{
+LinkedList<Vertex> shotestPath = dijkstra.getPath(vertexes.get((int)(random()*10)));
+Iterator iterator = shotestPath.iterator();
+
+int startId;
+int destId;
+
+Vertex start = null;
+Vertex dest = null;;
+
+NodeAgent s;
+NodeAgent d;
+
+start = (Vertex)iterator.next();
+startId = Integer.parseInt(start.getId().toString());
+s = nodes.get(startId);
+
+while(iterator.hasNext()){
+	dest = (Vertex)iterator.next();
+	destId = Integer.parseInt(dest.getId().toString());
+	d = nodes.get(destId);
+	s.connectTo(d);
+	s = d;
+}
+}catch(Exception e){
+System.out.println(e.getMessage());
+}
+
+	
+
+
+
+
+]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480177890073</Id>
+					<Name><![CDATA[createVertexes]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(NodeAgent nA: nodes){
+	vertexes.add(new Vertex(String.valueOf(nA.getIndex()),"Node "+nA.getIndex()));
+}
+
+for(Vertex v:vertexes){
+	System.out.println(v.getName()+' '+v.getId());
+}
+
+
+]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480177910363</Id>
+					<Name><![CDATA[createEdges]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[int weight = 0;
+
+Integer indexA = 0;
+Integer indexB = 0;
+
+Vertex s = null;
+Vertex d = null;
+String id = null;
+
+Edge e = null;
+for(NodeAgent a:nodes){
+	for(NodeAgent b:nodes){
+			weight = (int) getDistanceBetweenAgents(a,b);
+			
+			indexA = a.getIndex();
+			indexB = b.getIndex();
+			s = new Vertex(String.valueOf(indexA),"Node "+indexA.toString());
+			d = new Vertex(String.valueOf(indexB),"Node "+indexB.toString());
+			id = indexA.toString()+' '+indexB.toString();
+			e = new Edge(id,s,d,weight);			
+			edges.add(e);	
+	}
+}	
+showEdges();	
+		
+]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480242526507</Id>
+					<Name><![CDATA[showNodes]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>200</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(NodeAgent na:nodes){
+ System.out.println(na.toString());
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480242999551</Id>
+					<Name><![CDATA[showEdges]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>220</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(Edge e: edges){
+	System.out.println("id " + e.getId()+' '+" Sourse "+e.getSource().toString()+" Dest"+e.getDestination().toString()+" Weight "+e.getWeight());
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1480243834588</Id>
+					<Name><![CDATA[getDistanceBetweenAgents]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[s]]></Name>
+						<Type><![CDATA[NodeAgent]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[d]]></Name>
+						<Type><![CDATA[NodeAgent]]></Type>
+					</Parameter>
+					<Body><![CDATA[double sum =(pow(d.getX()-s.getX(),2)+ pow(d.getY()-s.getY(),2));
+double	duration = sqrt(sum);
+System.out.println("Distance between ");
+if (duration>100)
+	duration = Double.MAX_VALUE;
+		
+return duration;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480244460132</Id>
+					<Name><![CDATA[showGrapf]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[System.out.println(graph.toString());]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnType><![CDATA[void]]></ReturnType>
+					<Id>1480256767108</Id>
+					<Name><![CDATA[startCalc]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-400</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[disconnectAllFromAll();
+createVertexes();
+createEdges();
+graph = new Graph(vertexes,edges); 
+showGrapf();
+dijkstra = new Dijkstra(graph);
+dijkstra.execute(vertexes.get((int)(random()*10)));
+showShotestPath();]]></Body>
+				</Function>
+			</Functions>
+			<EmbeddedObjects>
+				<EmbeddedObject>
+					<Id>0</Id>
+					<Name><![CDATA[nodes]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-200</X><Y>10</Y>
+					<Label><X>20</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<PresentationId>1480014711589</PresentationId>
+					<ActiveObjectClass>
+						<PackageName><![CDATA[network]]></PackageName>
+						<ClassName><![CDATA[NodeAgent]]></ClassName>
+					</ActiveObjectClass>
+					<GenericParametersSubstitute><![CDATA[]]></GenericParametersSubstitute>
+					<Parameters>
+					</Parameters>
+					<Replication><![CDATA[10]]></Replication>	
+					<EnvironmentCode><![CDATA[environment]]></EnvironmentCode>
+					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+				</EmbeddedObject>
+			</EmbeddedObjects>
+			<Shapes>
+				<EmbeddedObjectPresentation>
+					<Id>1480014711589</Id>
+					<Name><![CDATA[nodes_presentation]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>300</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<ReplicationCode><![CDATA[nodes.size()]]></ReplicationCode>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<Rotation>0.0</Rotation>
+				</EmbeddedObjectPresentation>
+				<Text>
+					<Id>1480076933475</Id>
+					<Name><![CDATA[text]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>30</X><Y>195</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Connections per agent:]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933477</Id>
+					<Name><![CDATA[text1]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>30</X><Y>245</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Connection range:]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933479</Id>
+					<Name><![CDATA[text2]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>30</X><Y>295</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Neighbor link probability]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933481</Id>
+					<Name><![CDATA[text3]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>30</X><Y>345</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[M (Scale Free parameter)]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Line>
+					<Id>1480076933483</Id>
+					<Name><![CDATA[line]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>425</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<LineWidth>1</LineWidth>
+					<LineColor>-12156236</LineColor>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>180</Dx>
+					<Dy>0</Dy>
+				</Line>
+				<Text>
+					<Id>1480076933485</Id>
+					<Name><![CDATA[text4]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>410</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777088</Color>
+					<Text><![CDATA[Layout type]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Line>
+					<Id>1480076933487</Id>
+					<Name><![CDATA[line1]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>35</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<LineWidth>1</LineWidth>
+					<LineColor>-12156236</LineColor>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>180</Dx>
+					<Dy>0</Dy>
+				</Line>
+				<Text>
+					<Id>1480076933491</Id>
+					<Name><![CDATA[text5]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>20</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777088</Color>
+					<Text><![CDATA[Network type]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933493</Id>
+					<Name><![CDATA[text6]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>180</X><Y>195</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12156236</Color>
+					<Text><![CDATA[123]]></Text>
+					<TextCode><![CDATA[format( connectionsPerAgent )]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>RIGHT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933495</Id>
+					<Name><![CDATA[text7]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>180</X><Y>245</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12156236</Color>
+					<Text><![CDATA[123]]></Text>
+					<TextCode><![CDATA[format( connectionRange )]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>RIGHT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933497</Id>
+					<Name><![CDATA[text8]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>180</X><Y>345</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12156236</Color>
+					<Text><![CDATA[123]]></Text>
+					<TextCode><![CDATA[format( scaleFreeM )]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>RIGHT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480076933499</Id>
+					<Name><![CDATA[text9]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>180</X><Y>295</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12156236</Color>
+					<Text><![CDATA[123]]></Text>
+					<TextCode><![CDATA[format( neighborLinkProbability )]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>11</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>RIGHT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480180076165</Id>
+					<Name><![CDATA[text10]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-310</X><Y>-160</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[1 Створити вектор вершин
+2 Створити матрицю ребер
+3 Створити граф
+4 Задати вершину для старту 
+5 Задати вершину для фінішу
+6 Розрахувати найкоротший шлях між агентами 
+7 Показати найкоротший шлях]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>14</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>1480265849335</Id>
+					<Name><![CDATA[text11]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>30</X><Y>560</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>false</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777088</Color>
+					<Text><![CDATA[max R]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>12</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Shapes>
+			<Controls>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480076933501</Id>
+					<Name><![CDATA[sliderRange]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>255</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="170" Height="40" 
+				AsObject="false">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<EnableExpression><![CDATA[radioNetworkType.getValue() == 2]]></EnableExpression>
+						<ActionCode><![CDATA[applyNetwork();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[connectionRange]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[0]]></MinValue>
+						<MaxValue><![CDATA[500]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>connectionRange</Link>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="RadioButtons">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480076933506</Id>
+					<Name><![CDATA[radioLayoutType]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>440</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="160" Height="120" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor>-16777216</TextColor>
+						<ActionCode><![CDATA[environment.setLayoutType( value );
+environment.applyLayout();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
+						<Orientation>VERTICAL</Orientation>
+						<Button><![CDATA[None (user-defined)]]></Button>
+						<Button><![CDATA[Random]]></Button>
+						<Button><![CDATA[Arranged]]></Button>
+						<Button><![CDATA[Ring]]></Button>
+						<Button><![CDATA[Spring mass]]></Button>
+						<LinkTo>false</LinkTo>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="RadioButtons">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480076933508</Id>
+					<Name><![CDATA[radioNetworkType]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>30</X><Y>45</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="150" Height="140" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor>-16777216</TextColor>
+						<ActionCode><![CDATA[applyNetwork();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
+						<Orientation>VERTICAL</Orientation>
+						<Button><![CDATA[None (user-defined)]]></Button>
+						<Button><![CDATA[Random]]></Button>
+						<Button><![CDATA[All in range]]></Button>
+						<Button><![CDATA[Ring lattice]]></Button>
+						<Button><![CDATA[Small world]]></Button>
+						<Button><![CDATA[Scale free]]></Button>
+						<LinkTo>false</LinkTo>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480076933522</Id>
+					<Name><![CDATA[sliderConnectionsPerAgent]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>205</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="170" Height="40" 
+				AsObject="false">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<EnableExpression><![CDATA[radioNetworkType.getValue() == 1 || radioNetworkType.getValue() == 3 || radioNetworkType.getValue() == 4]]></EnableExpression>
+						<ActionCode><![CDATA[applyNetwork();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[connectionsPerAgent ]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[0]]></MinValue>
+						<MaxValue><![CDATA[10]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>connectionsPerAgent</Link>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480076933524</Id>
+					<Name><![CDATA[sliderNeighborLinkProb]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>305</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="170" Height="40" 
+				AsObject="false">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<EnableExpression><![CDATA[radioNetworkType.getValue() == 4]]></EnableExpression>
+						<ActionCode><![CDATA[applyNetwork();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[neighborLinkProbability]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[0]]></MinValue>
+						<MaxValue><![CDATA[1]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>neighborLinkProbability</Link>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480076933526</Id>
+					<Name><![CDATA[sliderScaleFreeM]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>355</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="170" Height="40" 
+				AsObject="false">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<EnableExpression><![CDATA[radioNetworkType.getValue() == 5]]></EnableExpression>
+						<ActionCode><![CDATA[applyNetwork();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[scaleFreeM]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[0]]></MinValue>
+						<MaxValue><![CDATA[50]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>scaleFreeM</Link>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="RadioButtons">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480077396145</Id>
+					<Name><![CDATA[radio]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>250</X><Y>0</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="240" Height="30" 
+				AsObject="false">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor>-16777216</TextColor>
+						<ActionCode><![CDATA[switch( value ) {
+case 0: setNumberOfAgents( 10 ); break;
+case 1: setNumberOfAgents( 50 ); break;
+case 2: setNumberOfAgents( 100 ); break;
+}]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<DefaultValueCode><![CDATA[2]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<Button><![CDATA[10 agents]]></Button>
+						<Button><![CDATA[50 agents]]></Button>
+						<Button><![CDATA[100 agents]]></Button>
+						<LinkTo>false</LinkTo>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480242617238</Id>
+					<Name><![CDATA[button7]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>500</X><Y>10</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="100" Height="30" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<ActionCode><![CDATA[startCalc();]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[Start]]></LabelText>
+					</ExtendedProperties>
+				</Control>
+				<Control Type="Slider">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>1480265803861</Id>
+					<Name><![CDATA[slider]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>20</X><Y>580</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="100" Height="30" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+					</BasicProperties>
+					<ExtendedProperties>
+						<DefaultValueCode><![CDATA[0]]></DefaultValueCode>
+						<Orientation>HORIZONTAL</Orientation>
+						<MinValue><![CDATA[50]]></MinValue>
+						<MaxValue><![CDATA[100]]></MaxValue>
+						<LinkTo>true</LinkTo>
+						<Link>maxR</Link>
+					</ExtendedProperties>
+				</Control>
+			</Controls>
+		</ActiveObjectClass>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1480014711542</Id>
+			<Name><![CDATA[NodeAgent]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<Generic>false</Generic>
+			<GenericParameters><![CDATA[T]]></GenericParameters>
+			<GenericParametersLabel><![CDATA[Generic parameters:]]></GenericParametersLabel>
+			<Agent>true</Agent>
+			<SamplesToKeep>100</SamplesToKeep>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+
+
+			</AgentProperties>
+
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+				<RecurrenceCode><![CDATA[1]]></RecurrenceCode>
+			</DatasetsCreationProperties>
+
+			<Shapes>
+				<Rectangle>
+					<Id>1480014711588</Id>
+					<Name><![CDATA[rectangle]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>-2</X><Y>-2</Y>
+					<Label><X>10</X><Y>10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<ZHeight>0</ZHeight>
+					<LineWidth>1</LineWidth>
+					<LineColor/>
+					<LineStyle>SOLID</LineStyle>
+					<Width>4</Width>
+					<Height>4</Height>
+					<Rotation>0.0</Rotation>
+					<FillColor>-16777216</FillColor>
+				</Rectangle>
+				<Line>
+					<Id>1480014711590</Id>
+					<Name><![CDATA[line]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<ReplicationCode><![CDATA[getConnectionsNumber()]]></ReplicationCode>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<LineWidth>1</LineWidth>
+					<LineColor>-65536</LineColor>
+					<LineStyle>SOLID</LineStyle>
+					<BeginArrowSize>1</BeginArrowSize>
+					<BeginArrowStyle>0</BeginArrowStyle>
+					<EndArrowSize>1</EndArrowSize>
+					<EndArrowStyle>0</EndArrowStyle>
+					<Dx>60</Dx>
+					<DxCode><![CDATA[getConnectedAgent( index ).getX() - getX()]]></DxCode>
+					<Dy>-40</Dy>
+					<DyCode><![CDATA[getConnectedAgent( index ).getY() - getY()]]></DyCode>
+				</Line>
+			</Shapes>
+		</ActiveObjectClass>
+	</ActiveObjectClasses>
+	<Experiments>	
+		<!--   =========   Simulation Experiment   ========  -->
+		<SimulationExperiment ActiveObjectClassId="1480014711541">
+			<Id>1480014711604</Id>
+			<Name><![CDATA[Simulation]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<PresentationTopGroupPersistent>true</PresentationTopGroupPersistent>
+			<IconTopGroupPersistent>true</IconTopGroupPersistent>
+			<Frame>
+				<X>0</X>
+				<Y>0</Y>
+				<Width>800</Width>
+				<Height>600</Height>
+			</Frame>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>64</MaximumMemory>
+			<RandomSeed>true</RandomSeed>
+			<SeedValue>1</SeedValue>
+			<RandomSelectionModeForSimultaneousEvents>false</RandomSelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
+			<RelativeAccuracy>1.0E-5</RelativeAccuracy>
+			<TimeAccuracy>1.0E-5</TimeAccuracy>
+			<FixedTimeStep>0.0010</FixedTimeStep>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+			<SnapshotFile></SnapshotFile>
+			<DiffEquationsNumericalMethod>EULER</DiffEquationsNumericalMethod>
+			<MixedEquationsNumericalMethod>RK45_NEWTON</MixedEquationsNumericalMethod>
+			<AlgebraicEquationsNumericalMethod>MODIFIED_NEWTON</AlgebraicEquationsNumericalMethod>
+			<Shapes>
+				<Text>
+					<Id>0</Id>
+					<Name><![CDATA[text]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>40</X><Y>30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Network]]></Text>
+					<Font>
+						<Name>Serif</Name>
+						<Size>28</Size>
+						<Style>1</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+				<Text>
+					<Id>0</Id>
+					<Name><![CDATA[text1]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>40</X><Y>63</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<AsObject>true</AsObject>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Lock>false</Lock>
+					<ShowIn3D>false</ShowIn3D>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[Страница настроек эксперимента]]></Text>
+					<Font>
+						<Name>Serif</Name>
+						<Size>16</Size>
+						<Style>2</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Shapes>
+			<Controls>
+				<Control Type="Button">
+				 	<EmbeddedIcon>false</EmbeddedIcon>				
+					<Id>0</Id>
+					<Name><![CDATA[button]]></Name>
+					<ExcludeFromBuild>false</ExcludeFromBuild>
+					<X>40</X><Y>120</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<BasicProperties Width="330" Height="30" 
+				AsObject="true">
+                        <EmbeddedIcon>false</EmbeddedIcon>				
+						<FillColor/>
+						<TextColor/>
+						<ActionCode><![CDATA[if ( getState() == IDLE )
+	run();	
+getEngine().getPresentation().setPresentable( getEngine().getRoot() );
+
+
+]]></ActionCode>
+					</BasicProperties>
+					<ExtendedProperties>
+						<Font Name="Dialog" Size="11" Style="0"/>
+						<LabelText><![CDATA[Запустить модель и открыть презентацию класса Main]]></LabelText>
+						<LabelCode><![CDATA[getState() == IDLE ?
+	"Start network simulation" :
+	"Start network simulation"]]></LabelCode>
+					</ExtendedProperties>
+				</Control>
+			</Controls>
+			<Parameters>			
+			</Parameters>			
+			<PresentationProperties 
+				EnableAdaptiveFrameManagement="true" 
+				EnableAntiAliasing="true"
+				EnablePanning="true"
+				EnableZoom="true">
+				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
+				<CpuRatio><![CDATA[ratio_1_2]]></CpuRatio>	        
+				<Title><![CDATA[Network : Simulation]]></Title>	
+				<FramesPerSecond><![CDATA[20.0]]></FramesPerSecond>
+				<RealTimeScale>SCALE_1</RealTimeScale>
+				<UIProperty Name="Experiment Progress" Value="false"/>
+				<UIProperty Name="Simulation Progress" Value="true"/>
+				<UIProperty Name="Statusbar Events Per Second" Value="false"/>
+				<UIProperty Name="Statusbar Frames Per Second" Value="false"/>
+				<UIProperty Name="Statusbar Memory" Value="true"/>
+				<UIProperty Name="Statusbar Model Date" Value="false"/>
+				<UIProperty Name="Statusbar Model Step" Value="false"/>
+				<UIProperty Name="Statusbar Model Time" Value="true"/>
+				<UIProperty Name="Statusbar Real Time Of Simulation" Value="true"/>
+				<UIProperty Name="Statusbar Status" Value="true"/>
+				<UIProperty Name="Toolbar Animation setup" Value="false"/>
+				<UIProperty Name="Toolbar Execution control" Value="true"/>
+				<UIProperty Name="Toolbar File" Value="false"/>
+				<UIProperty Name="Toolbar Model navigation" Value="true"/>
+				<UIProperty Name="Toolbar Time scale setup" Value="true"/>
+				<UIProperty Name="Toolbar View" Value="false"/>
+			</PresentationProperties>
+			<ModelTimeProperties 
+				UseCalendar="false">
+				<StopOption><![CDATA[Stop at specified time]]></StopOption>
+				<InitialDate><![CDATA[1480014711603]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1480020711603]]></FinalDate>	
+				<FinalTime><![CDATA[100.0]]></FinalTime>	
+				<ModelTimeUnit><![CDATA[Minute]]></ModelTimeUnit>	
+			</ModelTimeProperties>
+		</SimulationExperiment>	
+	</Experiments>
+	<JavaClasses>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1480092358093</Id>
+			<Name><![CDATA[Dijkstra]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<Text><![CDATA[/**
+ * Dijkstra
+ */	
+public class Dijkstra implements java.io.Serializable {
+    
+    private final List<Vertex> nodes;
+    private final List<Edge> edges; // Колекція всіх ребер
+    private Set<Vertex> settledNodes; // Постійна колекція
+    private Set<Vertex> unSettledNodes;// Тимчасова колекція
+    private Map<Vertex, Vertex> predecessors;
+    private Map<Vertex, Integer> distance; 
+
+    public Dijkstra(Graph graph) {
+        
+        this.nodes = new ArrayList<Vertex>(graph.getVertexes());
+        this.edges = new ArrayList<Edge>(graph.getEdges());
+        
+        this.settledNodes = new HashSet<Vertex>();
+        this.unSettledNodes = new HashSet<Vertex>();
+        //Колекція зі парами значень вершина - вага ребра , що виходить з даної вершини
+        this.distance = new HashMap<Vertex, Integer>();
+        
+        this.predecessors = new HashMap<Vertex, Vertex>();
+    }
+
+    public void execute(Vertex source) {  	
+        //Встановлюємо відстань від старту до поточної вершини (старту) 0
+        distance.put(source, 0);
+      	//В тимчасову колекцію поміщаємо source
+        unSettledNodes.add(source);        
+        
+        while (unSettledNodes.size() > 0) {
+			//З тимчасової колекції отримуємо вершину, з якої виходить ребро з найменшою вагою
+            Vertex node = getMinimum(unSettledNodes);
+			// Поміщаємо вершину node в постійну колекцію
+            settledNodes.add(node);
+            // Видаляємо вершину  node з тимчасової колекції
+            unSettledNodes.remove(node);
+            //
+            findMinimalDistances(node);
+        }
+
+    }
+	
+    private void findMinimalDistances(Vertex node) {
+    	// Отримуємо колекцію вершин з якими пов'язана вершина node
+        List<Vertex> adjacentNodes = getNeighbors(node);
+        // Для кожного сусіда target вершини node
+        for (Vertex target : adjacentNodes) {
+        	//Якщо найменше ребро з target більше суми (найменше_ребро_з_node + відстань_між_node_і_target
+            if (getShortestDistance(target) > getShortestDistance(node) + getDistance(node, target)) {
+                //То встановлюємо нове мінімальне значення
+            	distance.put(target, getShortestDistance(node)+ getDistance(node, target));
+            	// між вершинами target і node
+                predecessors.put(target, node);
+                //В тимчасову колекцію поміщаємо target
+                unSettledNodes.add(target);
+            }
+        }
+
+    }
+//повертає відстань від вершини node до веришини target
+    private int getDistance(Vertex node, Vertex target) {
+        for (Edge edge : edges) {
+            if (edge.getSource().equals(node)&& edge.getDestination().equals(target)) {
+                return edge.getWeight();
+            }
+        }
+        throw new RuntimeException("Should not happen");
+    }
+	//Повертає список всіх вершин, пов'язаних з node
+    private List<Vertex> getNeighbors(Vertex node) {
+        List<Vertex> neighbors = new ArrayList<Vertex>();
+        
+        for (Edge edge : edges) {
+            if (edge.getSource().equals(node)&& !isSettled(edge.getDestination())) {
+                neighbors.add(edge.getDestination());
+            }
+        }
+        return neighbors;
+    }
+	//Повертає вершину, з якої виходить ребро з наменшою вагою
+    private Vertex getMinimum(Set<Vertex> vertexes) {
+        Vertex minimum = null;
+        for (Vertex vertex : vertexes) {
+            if (minimum == null) {
+                minimum = vertex;
+            } else {
+                if (getShortestDistance(vertex) < getShortestDistance(minimum)) {
+                    minimum = vertex;
+                }
+            }
+        }
+        return minimum;
+    }
+	//Перевіряє чи знаходиться  vertex в постійній колекції
+    private boolean isSettled(Vertex vertex) {
+        return settledNodes.contains(vertex);
+    }
+	
+    //Повертає вагу ребра , яке виходить з destination
+    private int getShortestDistance(Vertex destination) {
+        Integer d = distance.get(destination);
+        if (d == null) {
+            return Integer.MAX_VALUE;
+        } else {
+            return d;
+        }
+    }
+
+    
+    //Повертає шлях від  source до target і NULL якщо шляху не існує
+    
+    public LinkedList<Vertex> getPath(Vertex target) {
+        LinkedList<Vertex> path = new LinkedList<Vertex>();
+        Vertex step = target;
+        // перевіряємо чи існує шлях до target
+        if (predecessors.get(step) == null) {
+            return null;
+        }
+        //Формуємо шлях
+        path.add(step);
+        while (predecessors.get(step) != null) {
+            step = predecessors.get(step);
+            path.add(step);
+        }
+        // відображаємо шлях в коректному порядку
+        Collections.reverse(path);
+        return path;
+    }
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	@Override
+	public String toString() {			
+		return super.toString();
+	}
+
+	/**
+	 * Это число используется при сохранении состояния модели<br>
+	 * Его рекомендуется изменить в случае изменения класса
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1480150313155</Id>
+			<Name><![CDATA[Vertex]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<Text><![CDATA[/**
+ * Vertex
+ */	
+public class Vertex implements java.io.Serializable {
+	final private String id;
+    final private String name;
+
+
+    public Vertex(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Vertex other = (Vertex) obj;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        return true;
+    }
+
+
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	@Override
+	public String toString() {			
+		return super.toString();
+	}
+
+	/**
+	 * Это число используется при сохранении состояния модели<br>
+	 * Его рекомендуется изменить в случае изменения класса
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1480150357709</Id>
+			<Name><![CDATA[Graph]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<Text><![CDATA[/**
+ * Graph
+ */	
+public class Graph implements java.io.Serializable {
+
+	 private final List<Vertex> vertexes;
+	    private final List<Edge> edges;
+
+	    public Graph(List<Vertex> vertexes, List<Edge> edges) {
+	        this.vertexes = vertexes;
+	        this.edges = edges;
+	    }
+
+	    public List<Vertex> getVertexes() {
+	        return vertexes;
+	    }
+
+	    public List<Edge> getEdges() {
+	        return edges;
+	    }
+
+    
+    
+    
+    
+     
+	
+	@Override
+	public String toString() {			
+		return super.toString();
+	}
+
+	/**
+	 * Это число используется при сохранении состояния модели<br>
+	 * Его рекомендуется изменить в случае изменения класса
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1480152245239</Id>
+			<Name><![CDATA[Edge]]></Name>
+			<ExcludeFromBuild>false</ExcludeFromBuild>
+			<Text><![CDATA[/**
+ * Edge
+ */	
+public class Edge implements java.io.Serializable {
+
+	private final String id;
+    private final Vertex source;
+    private final Vertex destination;
+    private final int weight;
+
+    
+    public Edge(String id, Vertex source, Vertex destination, int weight){
+    	   	
+    	this.id = id;
+        this.source = source;
+        this.destination = destination;
+        this.weight = weight;
+    }
+
+    public String getId() {
+        return id;
+    }
+    public Vertex getDestination() {
+        return destination;
+    }
+
+    public Vertex getSource() {
+        return source;
+    }
+    public int getWeight() {
+        return weight;
+    }
+
+     
+    
+    
+	
+	@Override
+	public String toString() {			
+		return super.toString();
+	}
+
+	/**
+	 * Это число используется при сохранении состояния модели<br>
+	 * Его рекомендуется изменить в случае изменения класса
+	 */ 
+	private static final long serialVersionUID = 1L;
+
+}]]></Text>
+		</JavaClass>
+	</JavaClasses>
+</Model>
+</AnyLogicWorkspace>
